@@ -2,11 +2,12 @@ import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import About from './components/About.tsx';
 import Contact from './components/Contact.tsx';
+import History from './components/History.tsx';
 import Projects from './components/Projects.tsx';
-import Skills from './components/Skills.tsx';
 import Footer from './components/Footer.tsx';
 import TextMarquee from './components/TextMarquee.tsx';
 import './App.css'
+import VideoPresentation from './components/VideoPresentation.tsx';
 
 function App() {
   return (
@@ -16,12 +17,12 @@ function App() {
       <Hero />
       <TextMarquee />
       <About />
+      <Projects />
+      <VideoPresentation />
+      <History />
+      <Contact />
+      <Footer />
     </div>
-    {/* 
-    <Projects />
-    <Skills />
-    <Contact />
-    <Footer /> */}
     </>
   )
 }
