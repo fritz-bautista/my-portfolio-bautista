@@ -1,21 +1,4 @@
-import {motion} from 'framer-motion';
-import { useState } from "react";
-import img1 from "../assets/images/1.png";
-import img2 from "../assets/images/2.png";
-import img3 from "../assets/images/3.png";
-import img4 from "../assets/images/4.png";
-
 function Hero() {
-  const images = [img1, img2, img3, img4];
-  const [current, setCurrent] = useState(0);
-  const handWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    if (e.deltaY > 0) {
-      setCurrent((prev) => Math.min(prev + 1, images.length - 1));
-    } else {
-      setCurrent((prev) => Math.max(prev - 1, 0));
-    }
-  };
 
   return (
     <div className="flex flex-col items-center w-full h-screen p-30 ">
