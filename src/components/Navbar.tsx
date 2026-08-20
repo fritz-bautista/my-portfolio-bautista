@@ -1,4 +1,10 @@
-function Navbar() {
+import { type Page } from '../App.tsx';
+
+interface NavbarProps {
+  setCurrentPage: (page: Page) => void;
+}
+
+function Navbar({ setCurrentPage }: NavbarProps) {
   return (
     <>
     <nav className="fixed top-0 left-0 z-50 w-full">
@@ -7,7 +13,15 @@ function Navbar() {
         <ul className="flex font-semibold">
           <li className="w-20 text-center">
             <a
-              href="#about"
+              onClick={() => setCurrentPage('home')}
+              className="inline-block transition-all duration-200 hover:scale-110"
+            >
+              Home
+            </a>
+          </li>
+          <li className="w-20 text-center">
+            <a
+              onClick={() => setCurrentPage('about')}
               className="inline-block transition-all duration-200 hover:scale-110"
             >
               About
@@ -15,18 +29,10 @@ function Navbar() {
           </li>
           <li className="w-20 text-center">
             <a
-              href="#projects"
+              onClick={() => setCurrentPage('projects')}
               className="inline-block transition-all duration-200 hover:scale-110"
             >
               Projects
-            </a>
-          </li>
-          <li className="w-20 text-center">
-            <a
-              href="#skills"
-              className="inline-block transition-all duration-200 hover:scale-110"
-            >
-              Skills
             </a>
           </li>
 

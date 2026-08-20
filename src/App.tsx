@@ -1,28 +1,33 @@
+import {useState} from 'react';
 import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import About from './components/About.tsx';
-import Contact from './components/Contact.tsx';
-import History from './components/History.tsx';
-import Projects from './components/Projects.tsx';
-import Footer from './components/Footer.tsx';
-import TextMarquee from './components/TextMarquee.tsx';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import ProjectPage from './pages/ProjectPage.tsx';
+
 import './App.css'
-import VideoPresentation from './components/VideoPresentation.tsx';
+
+export type Page = 'home' | 'about' | 'projects';
+
+const renderContent = (page: Page) => {
+  switch (page) {
+    case 'home':
+      return <Home />
+    case 'about':
+      return <About />
+    case 'projects':
+      return <ProjectPage />
+    default:
+      return <Home />;
+  }
+};
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<Page>('home');
+
   return (
     <>
-    <Navbar />
-    <div className="flex flex-col items-center w-full">
-      <Hero />
-      <TextMarquee />
-      <About />
-      <Projects />
-      <VideoPresentation />
-      <History />
-      <Contact />
-      <Footer />
-    </div>
+    <Navbar setCurrentPage={setCurrentPage} />
+    {renderContent(currentPage)}
     </>
   )
 }
