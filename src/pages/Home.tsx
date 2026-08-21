@@ -18,7 +18,6 @@ function Home() {
       <VideoPresentation />
       <History />
       <Contact />
-      <Footer />
     </div>
     </>
   )

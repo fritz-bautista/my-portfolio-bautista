@@ -14,7 +14,7 @@ function Navbar({ setCurrentPage }: NavbarProps) {
           <li className="w-20 text-center">
             <a
               onClick={() => setCurrentPage('home')}
-              className="inline-block transition-all duration-200 hover:scale-110"
+              className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Home
             </a>
@@ -22,7 +22,7 @@ function Navbar({ setCurrentPage }: NavbarProps) {
           <li className="w-20 text-center">
             <a
               onClick={() => setCurrentPage('about')}
-              className="inline-block transition-all duration-200 hover:scale-110"
+              className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               About
             </a>
@@ -30,7 +30,7 @@ function Navbar({ setCurrentPage }: NavbarProps) {
           <li className="w-20 text-center">
             <a
               onClick={() => setCurrentPage('projects')}
-              className="inline-block transition-all duration-200 hover:scale-110"
+              className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Projects
             </a>
@@ -39,7 +39,7 @@ function Navbar({ setCurrentPage }: NavbarProps) {
           <li className="w-20 text-center">
             <a
               href="#contact"
-              className="inline-block transition-all duration-200 hover:scale-110"
+              className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Contact
             </a>

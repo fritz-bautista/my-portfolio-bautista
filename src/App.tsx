@@ -5,6 +5,7 @@ import About from './pages/About.tsx';
 import ProjectPage from './pages/ProjectPage.tsx';
 
 import './App.css'
+import Footer from './components/Footer.tsx';
 
 export type Page = 'home' | 'about' | 'projects';
 
@@ -28,6 +29,7 @@ function App() {
     <>
     <Navbar setCurrentPage={setCurrentPage} />
     {renderContent(currentPage)}
+    <Footer />
     </>
   )
 }
