@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Navbar from './components/Navbar.tsx';
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
-import ProjectPage from './pages/ProjectPage.tsx';
+import ProjectMenu from './pages/ProjectMenu.tsx';
 
 import './App.css'
 import Footer from './components/Footer.tsx';
@@ -16,7 +16,7 @@ const renderContent = (page: Page) => {
     case 'about':
       return <About />
     case 'projects':
-      return <ProjectPage />
+      return <ProjectMenu />
     default:
       return <Home />;
   }
