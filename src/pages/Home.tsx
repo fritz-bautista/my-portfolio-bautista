@@ -6,15 +6,14 @@ import About from '../components/About.tsx';
 import Contact from '../components/Contact.tsx';
 import History from '../components/History.tsx';
 import Projects from '../components/Projects.tsx';
-import TextMarquee from '../components/TextMarquee.tsx';
 import VideoPresentation from '../components/VideoPresentation.tsx';
 
 const FadeInOnScroll =  ({ children }: {children: React.ReactNode }) => {
   return (
     <motion.div
       className="flex flex-col items-center w-full"
-      initial={{opacity: 0}}
-      whileInView={{opacity:1}}
+      initial={{y: 100}}
+      whileInView={{y:0}}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {children}  
@@ -28,7 +27,6 @@ function Home() {
       className="flex flex-col items-center w-full"
       >
         <Hero />
-        <TextMarquee />
 
         <FadeInOnScroll>
           <About />
