@@ -20,7 +20,16 @@ function About() {
                             and events.
                             </p>
                         </div>
-                        <img className="w-170 h-200 object-cover pointer-events-none" src={selfPortrait} alt="Self Portrait"/>
+                        <div className="relative size-full overflow-hidden">
+                            <img 
+                                // Added mask-image classes here:
+                                className="w-170 h-200 object-cover pointer-events-none [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" 
+                                src={selfPortrait} 
+                                alt="Self Portrait"
+                            />
+                        </div>
+                    </div>
+                    <div>
                     </div>
                 </div>
             </div>
