@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');@import "tailwindcss";
-:root {
-  /* Background Component Dynamic Variables */
-  --bg-canvas:     #060b15;
-  --bg-accent:     #7c3aed;
-  --bg-secondary:  #0ea5e9;
-  --bg-accent-2:   #f43f5e;
-  --bg-accent-3:   #10b981;
-  --bg-line:       #7dd3fc;
-  --bg-border:     #2a4468;
-  --bg-foreground: #dde4ef;
-}
-@theme {
-  --color-bg-canvas:     var(--bg-canvas);
-  --color-bg-accent:     var(--bg-accent);
-  --color-bg-secondary:  var(--bg-secondary);
-  --color-bg-accent-2:   var(--bg-accent-2);
-  --color-bg-accent-3:   var(--bg-accent-3);
-  --color-bg-line:     var(--bg-line);
-  --color-bg-border:     var(--bg-border);
-  --color-bg-foreground: var(--bg-foreground);
-}
+
 @theme {
     --color-primary: #052D57;
     --color-secondary: #F5F5F5;
@@ -72,4 +52,48 @@ body,
   font-size: 7rem;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.perspective {
+  transform: perspective(1000px) rotatex(20deg);
+}
+.carousel {
+  overflow-y: hidden;
+  height: 80vh;     
+  display: flex;
+  flex-direction: column; 
+  margin: 0 auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding-bottom: 1em; 
+  flex-shrink: 0; 
+  height: max-content; 
+  animation: spin1 40s infinite linear;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: auto; 
+  height: auto;
+  background-color: #f0f0f0;
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+@keyframes spin1 {
+  from { translate: 0 0; }
+  to { translate: 0 -100%; } 
 }

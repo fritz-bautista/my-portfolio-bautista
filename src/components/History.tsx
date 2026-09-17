@@ -34,18 +34,8 @@ const content  = [
     subtitle: "Pamantasan ng Lungsod ng Pasig (2022-2026)", 
     description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
     },
-    {id: 2, 
-    title: "Graphic Designer 2", 
-    subtitle: "PLP Computer Society (2023-2024)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
-    },
-    {id: 3, 
-    title: "Public Information Officer", 
-    subtitle: "PLP Himig Chorale (2023-2024)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
-    },
     {id: 4, 
-    title: "CCS Ambassador", 
+    title: "PLP Organization Leadership", 
     subtitle: "PLP Supreme Student Council (2024-2025)", 
     description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
     },
@@ -56,17 +46,12 @@ const content  = [
     },
     {id: 6, 
     title: "Freelance Graphic Designer", 
-    subtitle: "PLP Computer Society (2023-2024)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
-    },
-    {id: 7, 
-    title: "Part-Time Graphic Designer", 
-    subtitle: "PLP Computer Society (2023-2024)", 
+    subtitle: "RAMAN, YES, and Others (2025-2026)", 
     description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
     },
     {id: 8, 
     title: "MIS Web App Developer Intern", 
-    subtitle: "PLP Computer Society (2023-2024)", 
+    subtitle: "VST ECS Phils. Inc. (2026)", 
     description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
     },
     {id: 9, 
