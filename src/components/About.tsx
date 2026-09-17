@@ -4,7 +4,7 @@ import Marquee from "./Marquee.tsx";
 import QuoteCard from "./Card/QuoteCard.tsx";
 import selfPortrait from '../assets/images/Self Portrait.png';
 import selfPortrait2 from '../assets/images/ImageSelf1.jpg';
-import selfPortrait3 from '../assets/images/PSSC.jpeg';
+import selfPortrait3 from '../assets/images/PSSC.jpg';
 
 const FadeInOnScroll =  ({ children }: {children: React.ReactNode }) => {
   return (
