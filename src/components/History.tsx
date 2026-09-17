@@ -75,7 +75,7 @@ const content  = [
     description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
     },
     {id: 10, 
-    title: "TESDA Visual Graphic Design NC II Certification Course", 
+    title: "CIICC TESDA Java Programming NC3 Course", 
     subtitle: "2026 - ongoing", 
     description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
     },

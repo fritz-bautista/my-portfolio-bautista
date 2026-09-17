@@ -12,8 +12,9 @@ const FadeInOnScroll =  ({ children }: {children: React.ReactNode }) => {
   return (
     <motion.div
       className="flex flex-col items-center w-full"
-      initial={{y: 100}}
-      whileInView={{y:0}}
+      initial={{opacity: 0}}
+      whileInView={{opacity:  1}}
+      viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {children}  

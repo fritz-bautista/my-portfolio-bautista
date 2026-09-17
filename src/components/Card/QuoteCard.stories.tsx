@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 // This creates the actual preview of your component
 export const Default: Story = {
   args: {
-    title: "Inspirational Quote",
-    description: "The only limit to our realization of tomorrow is our doubts of today."
+    title: "",
+    description: ""
   }
 };

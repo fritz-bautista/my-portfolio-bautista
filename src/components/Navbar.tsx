@@ -8,7 +8,7 @@ function Navbar({ setCurrentPage }: NavbarProps) {
   return (
     <>
     <nav className="fixed top-0 left-0 z-50 w-full">
-      <div className="flex place-content-between items-center pr-15 pt-8 pl-14" >
+      <div className="flex place-content-between items-center pr-15 pt-8 pl-14 pb-8"  >
         <h1 className="text-2xl font-bold">FP</h1>
         <ul className="flex font-semibold">
           <li className="w-20 text-center">
