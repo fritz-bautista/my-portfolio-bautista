@@ -9,13 +9,13 @@ import selfPortrait4 from '../assets/images/ImageSelf3.png';
 
 function About() {
     return (
-        <div className="flex flex-col items-center w-full min-h-screen bg-bg2 text-white" font-google> 
+        <div className="flex flex-col items-center justify-center w-full min-h-screen bg-bg2 text-white" font-google> 
             <div className="size-full bg-repeat bg-[url(/grid-ellipsis.svg)] bg-[length:100px_100px]">
                 <div className="relative size-full bg-gradient-to-tr from-zinc-950/100 via-zinc-950/80 to-zinc-950/100 overflow-hidden">
                     <div className="absolute top-1/4 -translate-y-1/2 w-full z-0 opacity-90 pointer-events-none hidden md:block lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]">
                         <Marquee/>
                     </div>
-                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full p-20">
+                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full p-20 items-center justify-center">
                         <div className="flex flex-col  lg:justify-center w-full lg:gap-2 p-10 lg:p-20 lg:pt-40">
                             <h1 className="text-xl lg:text-3xl font-bold text-left"> {aboutInfo.name} </h1>
                             <h2 className="text-lg text-center lg:text-xl font-medium lg:text-left text-gray-300"> {aboutInfo.title} </h2>
