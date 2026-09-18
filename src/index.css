@@ -44,7 +44,6 @@ body,
 .track {
   position: absolute;
   white-space: nowrap;
-  
 }
 
 .track > h1 {
@@ -85,7 +84,7 @@ body,
   flex: 0 0 auto;
   width: auto; 
   height: auto;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   font-size: 3rem;
   border-radius: .2em;
   text-align: center;
@@ -96,4 +95,13 @@ body,
 @keyframes spin1 {
   from { translate: 0 0; }
   to { translate: 0 -100%; } 
+}
+
+.sidebar {
+  right: -20%;
+  transition: all 1s; 
+}
+
+.sidebar.active {
+  right: 0%;
 }

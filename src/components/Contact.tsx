@@ -1,7 +1,8 @@
 function Contact() {
     return (
         <>
-        <h1> Contact </h1>
+        <div className="flex flex-col bg-gray-200 w-full h-screen">
+        </div>
         </>
     )
 }

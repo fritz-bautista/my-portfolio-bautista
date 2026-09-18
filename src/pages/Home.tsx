@@ -6,6 +6,7 @@ import About from '../components/About.tsx';
 import Contact from '../components/Contact.tsx';
 import History from '../components/History.tsx';
 import Projects from '../components/Projects.tsx';
+import Skills from '../components/Skills.tsx';
 
 const FadeInOnScroll =  ({ children }: {children: React.ReactNode }) => {
   return (
@@ -34,6 +35,10 @@ function Home() {
         
         <FadeInOnScroll>
           <Projects />
+        </FadeInOnScroll>
+
+        <FadeInOnScroll>
+          <Skills />
         </FadeInOnScroll>
         
         <FadeInOnScroll>

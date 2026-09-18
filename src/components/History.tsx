@@ -1,4 +1,9 @@
 import { ScrollReveal } from './ScrollReveal';
+import image1 from '../assets/images/History/PLP.webp'; 
+import image2 from '../assets/images/History/PLPORG.jpg';
+import image3 from '../assets/images/History/PLPOJT.jpg';
+import image4 from '../assets/images/History/CourseraCert.png';
+import image5 from '../assets/images/History/CIICCJAVA.jpg';
 
 function History() {
     return (
@@ -10,14 +15,14 @@ function History() {
             <div className="flex flex-col font-google items-center w-full h-full mt-10 pl-10">
                 {content.map((item, index) => (
                     <ScrollReveal key={item.id} delay={index * 150}>
-                        <div className="grid grid-cols-2 w-full border-l-4 border-secondary p-10 mb-10">
+                        <div className="grid grid-cols-2 w-full items-center justify-center border-l-4 border-secondary p-10 mb-10 gap-10">
                             <div>
                                 <h1 className="text-2xl font-bold">{item.title}</h1>
                                 <p className="text-lg">{item.subtitle}</p>
                                 <p className="text-base mt-4">{item.description}</p>
                             </div>
                             <div>
-                                <p>Image Placeholder</p>
+                                <img src={item.image} alt="Image Placeholder" className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </ScrollReveal>
@@ -32,12 +37,14 @@ const content  = [
     {id: 1, 
     title: "BS Computer Science", 
     subtitle: "Pamantasan ng Lungsod ng Pasig (2022-2026)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image1
     },
     {id: 4, 
     title: "PLP Organization Leadership", 
     subtitle: "PLP Supreme Student Council (2024-2025)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image2
     },
     {id: 5, 
     title: "Freelance Web Developer", 
@@ -52,17 +59,20 @@ const content  = [
     {id: 8, 
     title: "MIS Web App Developer Intern", 
     subtitle: "VST ECS Phils. Inc. (2026)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image3
     },
     {id: 9, 
     title: "Google x DTI UX Designer Certification Course", 
     subtitle: "2026 - ongoing", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image4
     },
     {id: 10, 
     title: "CIICC TESDA Java Programming NC3 Course", 
     subtitle: "2026 - ongoing", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image5
     },
 ]
 

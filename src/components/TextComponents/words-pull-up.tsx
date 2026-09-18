@@ -35,7 +35,7 @@ export function WordsPullUp({
           animate={isInView ? 'animate' : ''}
           custom={i}
           className={cn(
-            'text-xl text-center sm:text-4xl font-medium tracking-tighter md:text-3xl md:leading-[2rem]',
+            'text-xl text-center sm:text-4xl font-medium font-google tracking-tighter md:text-3xl md:leading-[2rem]',
             'pr-1', // class to sperate words
             className
           )}

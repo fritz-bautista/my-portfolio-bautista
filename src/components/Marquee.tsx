@@ -28,7 +28,7 @@ const Marquee: React.FC = () => {
           variants={marqueeVariants}
           animate="animate"
         >
-          <h1>
+          <h1 className="font-google">
             Passion - Purpose - Identity - Passion - Purpose - Identity - Passion - Purpose - Identity - Passion - Purpose - Identity - Passion - Purpose - Identity - Passion - Purpose - Identity
           </h1>
         </motion.div>

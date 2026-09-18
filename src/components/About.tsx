@@ -9,23 +9,23 @@ import selfPortrait4 from '../assets/images/ImageSelf3.png';
 
 function About() {
     return (
-        <div className="flex flex-col items-center w-full min-h-screen bg-bg2 text-white"> 
+        <div className="flex flex-col items-center w-full min-h-screen bg-bg2 text-white" font-google> 
             <div className="size-full bg-repeat bg-[url(/grid-ellipsis.svg)] bg-[length:100px_100px]">
                 <div className="relative size-full bg-gradient-to-tr from-zinc-950/100 via-zinc-950/80 to-zinc-950/100 overflow-hidden">
                     <div className="absolute top-1/4 -translate-y-1/2 w-full z-0 opacity-90 pointer-events-none hidden md:block lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]">
                         <Marquee/>
                     </div>
-                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full pt-10">
+                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full p-20">
                         <div className="flex flex-col  lg:justify-center w-full lg:gap-2 p-10 lg:p-20 lg:pt-40">
-                            <h1 className="text-xl lg:text-4xl font-bold text-left"> {aboutInfo.name} </h1>
-                            <h2 className="text-lg text-center lg:text-2xl font-medium lg:text-left text-gray-300"> {aboutInfo.title} </h2>
-                            <p className="text-md text-center lg:text-2xl lg:text-justify font-google  mt-1 w-full">
+                            <h1 className="text-xl lg:text-3xl font-bold text-left"> {aboutInfo.name} </h1>
+                            <h2 className="text-lg text-center lg:text-xl font-medium lg:text-left text-gray-300"> {aboutInfo.title} </h2>
+                            <p className="text-md text-center lg:text-lg lg:text-justify mt-1 w-full">
                             {aboutInfo.description}
                             </p>
                         </div>
                         <div className="relative size-full overflow-hidden">
                             <img 
-                                className="lg:w-170 lg:h-200 object-cover pointer-events-none [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" 
+                                className="lg:w-110 lg:h-150 object-cover pointer-events-none [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" 
                                 src={selfPortrait} 
                                 alt="Self Portrait"
                             />
@@ -34,7 +34,7 @@ function About() {
                 </div>
                 
             </div>
-            <div className="flex flex-col items-center bg-white justify-center w-full gap-10 lg:p-20 lg:pt-20">
+            <div className="flex flex-col items-center bg-white justify-center w-full gap-10 lg:pl-40 lg:pr-40 pb-20">
                 // Made the QuoteCard into an array of objects to make it easier to add more cards int the future.
                 {quoteCardData.map((item,index) => (
                     <FadeInOnScroll key={index} >
@@ -42,7 +42,7 @@ function About() {
                             <div className="z-0 h-full w-full lg:w-200">
                                 <img src={item.img} alt="Self Portrait" className={`w-full h-full object-cover ${index % 2 !== 0 ? 'lg:[mask-image:linear-gradient(to_left,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_left,black_60%,transparent_100%)]' : 'lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]'}`} />
                             </div>
-                            <div className={`z-10 w-150 h-full item-center justify-center  ${index % 2 !== 0 ? '-mr-20' : '-ml-20' }`}>
+                            <div className={`z-10 w-150 h-full item-center justify-center  ${index % 2 !== 0 ? '-mr-20' : '-ml-0' }`}>
                                 <QuoteCard
                                 title={item.title}
                                 description={item.description}
@@ -79,7 +79,7 @@ const aboutInfo = {
 const quoteCardData = [
     {
         title: "PASSION keeps me going!",
-        description: "TI am passionate in what I do, this is the reason why I always go beyond the standard and produce outputs with quality. This passion for programming and graphic designing gives me the commitment and discipline to learn new skills and produce great outputs. ",
+        description: "I am passionate in what I do, this is the reason why I always go beyond the standard and produce outputs with quality. This passion for programming and graphic designing gives me the commitment and discipline to learn new skills and produce great outputs. ",
         img: selfPortrait3
     },
     {

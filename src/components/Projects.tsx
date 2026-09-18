@@ -9,10 +9,10 @@ import image6 from '../assets/images/ProjectHome/CUISINE.png';
 function Projects() {
     return (
         <>
-        <div className="flex flex-col items-center w-full min-h-screen bg-bg2 text-white">
+        <div className="flex flex-col items-center w-full min-h-screen bg-bg2 text-white font-google">
             <div className="size-full bg-repeat bg-[url(/grid-ellipsis.svg)] bg-[length:100px_100px]">
                 <div className="relative size-full bg-gradient-to-tr from-zinc-950/100 via-zinc-950/90 to-zinc-950/100 overflow-hidden">
-                    <div className="flex items-center justify-content w-full h-screen overflow-hidden p-20 gap-10">
+                    <div className="flex items-center justify-content w-full h-screen overflow-hidden pl-40 pr-40 gap-10">
                         <div className="carousel perspective [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)] 
                             [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)]">
                             <div className="group">
@@ -37,14 +37,19 @@ function Projects() {
                                 ))}
                             </div>
                         </div>
-                        <div className="flex flex-col w-full h-full">
-                            <div>
+                        <div className="flex flex-col w-full h-full items-center justify-center p-10">
+                            <div className="flex flex-col gap-10 items-center justify-center">
                                 <div className=" items-center justify-center w-full h-full">
-                                    <h1 className="text-5xl font-bold text-white text-center">{pageInfo.title}</h1>
-                                    <p className="text-lg text-white text-center mt-4">
+                                    <h1 className="text-3xl font-bold text-white text-center">{pageInfo.title}</h1>
+                                    <p className="text-lg text-white text-justify mt-4">
                                         {pageInfo.description}
                                     </p>
                                 </div>
+                                <button
+                                    className="bg-blue-500 hover:bg-blue-700 text-xl text-white font-bold py-4 px-6 rounded-lg hover:cursor-pointer"
+                                    >
+                                        View Projects
+                                </button>
                             </div>
                         </div>
                     </div>
