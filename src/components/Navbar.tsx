@@ -8,10 +8,10 @@ interface NavbarProps {
 function Navbar({ setCurrentPage, show }: NavbarProps) {
   return (
     <>
-    <nav className={`fixed top-0 right-0 z-50 bg-black w-20% h-full 
+    <nav className={`fixed top-0 right-0 z-50 bg-black w-64 h-full 
                     ${show ? 'sidebar active' : 'sidebar'}`}>
       <div className="flex flex-col w-full place-content-between items-center gap-5 pr-15 pt-8 pl-14 pb-8 text-white"  >
-        <h1 className="text-2xl font-bold">FP</h1>
+        {/* <h1 className="text-2xl font-bold">FP</h1> */}
         <ul className="flex flex-col gap-3 font-semibold text-left w-full">
           <li className="w-full">
             <a

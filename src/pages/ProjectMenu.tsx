@@ -4,7 +4,7 @@ import fritzBannerImg from '../assets/images/FritzBanner.png';
 function ProjectMenu() {
     return (
         <>
-        <div className="flex flex-col items-center w-full h-screen">
+        <div className="flex flex-col items-center w-full h-screen bg-white">
             <div className="w-full h-cover bg-black mt-25">
                 <img src={fritzBannerImg} className=""></img>
             </div>

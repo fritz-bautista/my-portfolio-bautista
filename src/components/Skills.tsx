@@ -16,11 +16,11 @@ const logosGraphic = [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdo
 function Skills() {
     return (
         <>
-        <div className="flex flex-col bg-bg2 w-full h-screen font-google">
-            <div className="flex w-full justify-center p-20">
-                <h1 className="text-3xl font-bold text-white">What I use</h1>
+        <div className="flex flex-col bg-bg2 w-full items-center font-google gap-20 p-30">
+            <div className="flex w-full justify-center">
+                <h1 className="text-5xl font-bold text-white">What software do I use?</h1>
             </div>
-            <div className="flex w-full h-full pl-40 pr-40 gap-10">
+            <div className="flex w-full pl-40 pr-40 gap-10 justify-center items-center">
                 <div className="text-white w-2/4">
                     <h1 className="font-bold text-2xl">Software Development</h1>
                     <p className="text-lg">Here are the softwares and tools I use for my projects in Software Development</p>
@@ -38,7 +38,7 @@ function Skills() {
                     </div>
                 </div>
             </div>
-            <div className="flex w-full h-full pl-40 pr-40 gap-10">
+            <div className="flex w-full pl-40 pr-40 gap-10 justify-center items-center">
                 <div className="text-white w-2/4">
                     <h1 className="font-bold text-2xl">Graphic Designing</h1>
                     <p className="text-lg">Here are the softwares and tools I use for my projects in Graphic Designing</p>

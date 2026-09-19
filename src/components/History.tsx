@@ -8,21 +8,21 @@ import image5 from '../assets/images/History/CIICCJAVA.jpg';
 function History() {
     return (
         <>
-        <div className="flex flex-col items-center w-full h-full p-20">
+        <div className="flex flex-col items-center w-full h-full p-20 font-google bg-white">
             <div className="flex flex-col items-left w-full">
-                <h1 className="text-4xl font-google font-bold">What have I been up to?</h1>
+                <h1 className="text-4xl font-bold">What have I been up to?</h1>
             </div>
-            <div className="flex flex-col font-google items-center w-full h-full mt-10 pl-10">
+            <div className="flex flex-col font-google items-center w-4/5 h-full mt-10 pl-10">
                 {content.map((item, index) => (
                     <ScrollReveal key={item.id} delay={index * 150}>
-                        <div className="grid grid-cols-2 w-full items-center justify-center border-l-4 border-secondary p-10 mb-10 gap-10">
-                            <div>
+                        <div className="grid grid-cols-2 items-center justify-center border-l-4 border-secondary p-10 mb-10 gap-10">
+                            <div className="w-full text-justify">
                                 <h1 className="text-2xl font-bold">{item.title}</h1>
                                 <p className="text-lg">{item.subtitle}</p>
                                 <p className="text-base mt-4">{item.description}</p>
                             </div>
                             <div>
-                                <img src={item.image} alt="Image Placeholder" className="w-full h-full object-cover" />
+                                <img src={item.image} alt="Image Placeholder" className="w-full h-full object-cover lg:border-r-20" />
                             </div>
                         </div>
                     </ScrollReveal>
