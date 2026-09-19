@@ -16,16 +16,21 @@ const logosGraphic = [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdo
 function Skills() {
     return (
         <>
-        <div className="flex flex-col bg-bg2 w-full items-center font-google gap-20 p-30">
-            <div className="flex w-full justify-center">
-                <h1 className="text-5xl font-bold text-white">What software do I use?</h1>
+        <div className="flex flex-col bg-white w-full items-center font-google gap-0.5 m-0.5">
+            <div className="grid grid-cols-6 grid-rows-1 gap-0.5 w-full">
+                <div className="bg-black w-full">1</div>
+                <div className="col-span-4 flex w-full justify-center bg-black p-20">
+                    <h1 className="text-5xl font-bold text-white">What software do I use?</h1>
+                </div>
+                <div className="col-start-6 bg-black">4</div>
             </div>
-            <div className="flex w-full pl-40 pr-40 gap-10 justify-center items-center">
-                <div className="text-white w-2/4">
+            <div className="grid grid-cols-6 grid-rows-3 gap-0.5 w-full">
+                <div className="row-span-3 bg-black">1</div>
+                <div className="col-span-2 row-span-3 bg-blue-700 text-white flex flex-col justify-center p-10">
                     <h1 className="font-bold text-2xl">Software Development</h1>
                     <p className="text-lg">Here are the softwares and tools I use for my projects in Software Development</p>
                 </div>
-                <div>
+                <div className="col-span-2 row-span-3 col-start-4 bg-black p-10">
                     <div className="grid grid-cols-5 gap-6">
                         {logosSoftDev.map((Icon, index) => (
                             <div 
@@ -37,13 +42,15 @@ function Skills() {
                         ))} 
                     </div>
                 </div>
+                <div className="row-span-3 col-start-6 bg-black">4</div>
             </div>
-            <div className="flex w-full pl-40 pr-40 gap-10 justify-center items-center">
-                <div className="text-white w-2/4">
+            <div className="grid grid-cols-6 grid-rows-3 gap-0.5 w-full">
+                <div className="row-span-3 bg-black">1</div>
+                <div className="col-span-2 row-span-3 bg-yellow-500 text-white flex flex-col justify-center p-10">
                     <h1 className="font-bold text-2xl">Graphic Designing</h1>
                     <p className="text-lg">Here are the softwares and tools I use for my projects in Graphic Designing</p>
                 </div>
-                <div>
+                <div className="col-span-2 row-span-3 col-start-4 bg-black p-10">
                     <div className="grid grid-cols-5 gap-6">
                         {logosGraphic.map((Icon, index) => (
                             <div 
@@ -52,9 +59,15 @@ function Skills() {
                             >
                                 <Icon className="text-6xl"/>
                             </div>
-                        ))}
+                        ))} 
                     </div>
                 </div>
+                <div className="row-span-3 col-start-6 bg-black">4</div>
+            </div>
+            <div className="grid grid-cols-6 grid-rows-1 gap-0.5 w-full">
+                <div className="bg-black w-full">1</div>
+                <div className="col-span-4 flex w-full justify-center bg-black p-20"></div>
+                <div className="col-start-6 bg-black">4</div>
             </div>
         </div>
         </>

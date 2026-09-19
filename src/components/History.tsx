@@ -4,6 +4,8 @@ import image2 from '../assets/images/History/PLPORG.jpg';
 import image3 from '../assets/images/History/PLPOJT.jpg';
 import image4 from '../assets/images/History/CourseraCert.png';
 import image5 from '../assets/images/History/CIICCJAVA.jpg';
+import image6 from '../assets/images/History/WebDev.jpg';
+import image7 from '../assets/images/History/Raman-1.png';
 
 function History() {
     return (
@@ -49,12 +51,14 @@ const content  = [
     {id: 5, 
     title: "Freelance Web Developer", 
     subtitle: "Cuisine Website and SulaTula Application (2025)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image6
     },
     {id: 6, 
     title: "Freelance Graphic Designer", 
     subtitle: "RAMAN, YES, and Others (2025-2026)", 
-    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry."
+    description: "Started my programming career at Pamantasan ng Lungsod ng Pasig in 2022. I developed different systems and web applications with a diverse set of frameworks and languages. I was able to learn soft and technical skills through collaboration and leadership through organizations and key projects in the University. Graphic design and UI/UX have become my forte and focus throughout my studies and continuously improving in the industry.",
+    image: image7
     },
     {id: 8, 
     title: "MIS Web App Developer Intern", 
