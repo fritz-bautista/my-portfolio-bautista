@@ -1,6 +1,5 @@
 
 import { motion } from "framer-motion";
-
 import Hero from '../components/Hero.tsx';
 import About from '../components/About.tsx';
 import Contact from '../components/Contact.tsx';

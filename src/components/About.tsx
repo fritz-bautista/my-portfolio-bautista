@@ -69,9 +69,9 @@ function About() {
                             <motion.div variants={itemVariants} className="col-span-4 row-span-2 col-start-2 row-start-2 lg:col-span-2 lg:row-span-3 lg:col-start-2 lg:row-start-2 bg-white w-full h-full">
                                 <img src={item.img} alt="Self Portrait" className="w-full h-full object-cover lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]" />
                             </motion.div>
-                            <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-4 lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-2 bg-blue-600 w-full h-full flex flex-col gap-2 justify-center items-center text-center lg:text-left p-15">
-                                <h1 className="text-3xl font-bold w-full text-white">{item.title}</h1>
-                                <p className="w-full font-medium text-center lg:text-lg lg:text-justify text-white">{item.description}</p>
+                            <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-4 lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-2 bg-blue-600 w-full h-full flex flex-col gap-2 justify-center items-center text-center lg:text-left p-12">
+                                <h1 className="text-2xl font-bold w-full text-white">{item.title}</h1>
+                                <p className="w-full font-medium text-center lg:text-md lg:text-justify text-white">{item.description}</p>
                             </motion.div>
                             <motion.div variants={itemVariants} className="row-span-3 col-start-6 row-start-2 w-full h-full bg-white"></motion.div>
                             <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-1 bg-white w-full h-full"></motion.div>

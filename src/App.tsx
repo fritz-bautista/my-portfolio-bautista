@@ -1,31 +1,17 @@
 import {useState} from 'react';
+import { Routes, Route } from 'react-router-dom'; // 1. Import Router components
 import Navbar from './components/Navbar.tsx';
 import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
-import ProjectMenu from './pages/ProjectMenu.tsx';
+import ProjectMenu from './components/ProjectMenu.tsx';
+import ProjectPage from './components/ProjectPage.tsx';
+import ProjectHome from './pages/ProjectHome.tsx';
 import { IoMenu } from "react-icons/io5";
 
 import './App.css'
 import Footer from './components/Footer.tsx';
 
-export type Page = 'home' | 'about' | 'projects';
-
-const renderContent = (page: Page) => {
-  switch (page) {
-    case 'home':
-      return <Home />
-    case 'about':
-      return <About />
-    case 'projects':
-      return <ProjectMenu />
-    default:
-      return <Home />;
-  }
-};
-
 function App() {
   const [showNav, setShowNav] = useState(false);
-  const [currentPage, setCurrentPage] = useState<Page>('home');
 
   return (
     <>
@@ -34,8 +20,13 @@ function App() {
         }`}>
           <IoMenu className="text-white text-3xl hover:cursor-pointer" onClick={() => setShowNav(!showNav)}/>
       </div>
-      <Navbar setCurrentPage={setCurrentPage} show={showNav}/>
-      {renderContent(currentPage)}
+      <Navbar show={showNav}/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectHome />} />
+        <Route path="/projects/menu" element={<ProjectMenu />} />
+        <Route path="/projects/menu/page" element={<ProjectPage />} />
+      </Routes>
       <Footer />
     </>
   )

@@ -1,11 +1,10 @@
-import { type Page } from '../App.tsx';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
-  setCurrentPage: (page: Page) => void;
   show: boolean;
 }
 
-function Navbar({ setCurrentPage, show }: NavbarProps) {
+function Navbar({show }: NavbarProps) {
   return (
     <>
     <nav className={`fixed top-0 right-0 z-50 bg-black w-64 h-full 
@@ -14,29 +13,29 @@ function Navbar({ setCurrentPage, show }: NavbarProps) {
         {/* <h1 className="text-2xl font-bold">FP</h1> */}
         <ul className="flex flex-col gap-3 font-semibold text-left w-full">
           <li className="w-full">
-            <a
-              onClick={() => setCurrentPage('home')}
+            <Link
+            to="/"
               className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="w-full">
-            <a
-              onClick={() => setCurrentPage('projects')}
+            <Link
+            to="/projects"
               className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Projects
-            </a>
+            </Link>
           </li>
 
           <li className="w-full">
-            <a
-              href="#contact"
+            <Link
+            to="/"
               className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -30,14 +30,14 @@ function Skills() {
                     <h1 className="font-bold text-2xl">Software Development</h1>
                     <p className="text-lg">Here are the softwares and tools I use for my projects in Software Development</p>
                 </div>
-                <div className="col-span-2 row-span-3 col-start-4 bg-black p-10">
-                    <div className="grid grid-cols-5 gap-6">
+                <div className="col-span-2 row-span-3 col-start-4 p-5 bg-black w-full">
+                    <div className="grid grid-cols-5 gap-6 w-full flex items-center justify-center">
                         {logosSoftDev.map((Icon, index) => (
                             <div 
                             key = {index}
-                            className="flex w-20 h-20 bg-white rounded-2xl items-center justify-center transition-transform hover:scale-110"
+                            className="flex w-18 h-18 bg-white rounded-2xl items-center justify-center transition-transform hover:scale-110"
                             >
-                                <Icon className="text-6xl"/>
+                                <Icon className="text-5xl"/>
                             </div>
                         ))} 
                     </div>
@@ -50,14 +50,14 @@ function Skills() {
                     <h1 className="font-bold text-2xl">Graphic Designing</h1>
                     <p className="text-lg">Here are the softwares and tools I use for my projects in Graphic Designing</p>
                 </div>
-                <div className="col-span-2 row-span-3 col-start-4 bg-black p-10">
-                    <div className="grid grid-cols-5 gap-6">
+                <div className="col-span-2 row-span-3 col-start-4 bg-black p-5 w-full flex items-center">
+                    <div className="grid grid-cols-5 gap-6 w-full">
                         {logosGraphic.map((Icon, index) => (
                             <div 
                             key = {index}
-                            className="flex w-20 h-20 bg-white rounded-2xl items-center justify-center transition-transform hover:scale-110"
+                            className="flex w-18 h-18 bg-white rounded-2xl items-center justify-center transition-transform hover:scale-110"
                             >
-                                <Icon className="text-6xl"/>
+                                <Icon className="text-5xl"/>
                             </div>
                         ))} 
                     </div>
