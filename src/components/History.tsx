@@ -1,5 +1,5 @@
 import { ScrollReveal } from './ScrollReveal';
-import image1 from '../assets/images/History/PLP.webp'; 
+import image1 from '../assets/images/History/PLP.webp';
 import image3 from '../assets/images/History/PLPOJT.jpg';
 import image4 from '../assets/images/History/CourseraCert.png';
 import image5 from '../assets/images/History/CIICCJAVA.jpg';

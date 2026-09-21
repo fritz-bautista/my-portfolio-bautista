@@ -53,6 +53,8 @@ body,
   text-transform: uppercase;
 }
 
+/* For project carousel */
+
 .perspectiveReverse {
   transform: perspective(1000px) rotatex(-20deg);
 }
@@ -68,7 +70,6 @@ body,
   height: max-content; 
   animation: spinReverse 40s infinite linear;
 }
-
 
 .perspective {
   transform: perspective(1000px) rotatex(20deg);
@@ -126,4 +127,20 @@ body,
 
 .sidebar.active {
   right: 0%;
+}
+
+/* For Image Slider */
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
 }

@@ -15,10 +15,10 @@ function App() {
 
   return (
     <>
-      <div className={`fixed flex top-0 w-full p-10 z-[999] justify-end mix-blend-difference transition-transform duration-1100 ease-in-out ${
+      <div className={`fixed flex top-0 w-full p-10 z-[999] justify-end mix-blend-difference pointer-events-none transition-transform duration-1100 ease-in-out ${
           showNav ? '-translate-x-64' : 'translate-x-0'
         }`}>
-          <IoMenu className="text-white text-3xl hover:cursor-pointer" onClick={() => setShowNav(!showNav)}/>
+          <IoMenu className="text-white text-3xl cursor-pointer pointer-events-auto" onClick={() => setShowNav(!showNav)}/>
       </div>
       <Navbar show={showNav}/>
       <Routes>

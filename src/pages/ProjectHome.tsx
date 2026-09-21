@@ -3,9 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 function ProjectHome() {
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const category = {
+    web: "webProjectData",
+    graph: "graphProjectData"
+  }
     
-const containerVariants: Variants = {
+  const containerVariants: Variants = {
     hidden: {opacity: 0},
     show: {
       opacity: 1,
@@ -40,17 +45,17 @@ const containerVariants: Variants = {
                 <motion.div variants={itemVariants} className="col-span-4 bg-white"></motion.div>
                 <motion.div 
                 variants={itemVariants} 
-                className="col-span-2 row-span-3 col-start-2 row-start-2 bg-blue-700 flex items-center justify-center hover:cursor-pointer"
-                onClick={() => navigate('/projects/menu')}
+                className="col-span-2 row-span-3 col-start-2 row-start-2 bg-blue-700 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
+                onClick={() => navigate('/projects/menu', {state: category.web})}
                 >
-                    <h1 className="text-5xl text-white font-bold">Software Development</h1>
+                    <h1 className="xl:text-4xl text-white font-bold">Software Development</h1>
                 </motion.div>
                 <motion.div 
                 variants={itemVariants} 
-                className="col-span-2 row-span-3 col-start-4 row-start-2 bg-yellow-500 flex items-center justify-center hover:cursor-pointer"
-                onClick={() => navigate('/projects/menu')}
+                className="col-span-2 row-span-3 col-start-4 row-start-2 bg-yellow-500 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
+                onClick={() => navigate('/projects/menu', {state: category.graph})}
                 >
-                    <h1 className="text-5xl text-white font-bold">Graphic Designing</h1>
+                    <h1 className="lg:text-3xl xl:text-4xl text-white font-bold">Graphic Designing</h1>
                 </motion.div>
                 <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-5 bg-white"></motion.div>
                 <motion.div variants={itemVariants} className="col-start-6 bg-white"></motion.div>

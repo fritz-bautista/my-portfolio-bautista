@@ -17,7 +17,7 @@ function Skills() {
     return (
         <>
         <div className="flex flex-col bg-white w-full items-center font-google gap-0.5 m-0.5">
-            <div className="grid grid-cols-6 grid-rows-1 gap-0.5 w-full">
+            <div className="grid grid-cols-6 gap-0.5 w-full">
                 <div className="bg-black w-full">1</div>
                 <div className="col-span-4 flex w-full justify-center bg-black p-20">
                     <h1 className="text-5xl font-bold text-white">What software do I use?</h1>
@@ -28,10 +28,9 @@ function Skills() {
                 <div className="row-span-3 bg-black">1</div>
                 <div className="col-span-2 row-span-3 bg-blue-700 text-white flex flex-col justify-center p-10">
                     <h1 className="font-bold text-2xl">Software Development</h1>
-                    <p className="text-lg">Here are the softwares and tools I use for my projects in Software Development</p>
                 </div>
-                <div className="col-span-2 row-span-3 col-start-4 p-5 bg-black w-full">
-                    <div className="grid grid-cols-5 gap-6 w-full flex items-center justify-center">
+                <div className="col-span-2 row-span-3 col-start-4 p-5 bg-black w-full flex items-center justify-center">
+                    <div className="grid grid-cols-5 gap-6 w-full h-full">
                         {logosSoftDev.map((Icon, index) => (
                             <div 
                             key = {index}
@@ -48,7 +47,6 @@ function Skills() {
                 <div className="row-span-3 bg-black">1</div>
                 <div className="col-span-2 row-span-3 bg-yellow-500 text-white flex flex-col justify-center p-10">
                     <h1 className="font-bold text-2xl">Graphic Designing</h1>
-                    <p className="text-lg">Here are the softwares and tools I use for my projects in Graphic Designing</p>
                 </div>
                 <div className="col-span-2 row-span-3 col-start-4 bg-black p-5 w-full flex items-center">
                     <div className="grid grid-cols-5 gap-6 w-full">

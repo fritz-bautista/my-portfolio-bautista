@@ -27,12 +27,12 @@ function Hero() {
   }
 
   return (
-    <div className="flex flex-col bg-black items-center justify-center w-full h-screen">
+    <div className="flex flex-col bg-black items-center justify-center w-full h-screen overflow-hidden">
       <motion.div 
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="grid grid-cols-5 grid-rows-5 gap-0.5 flex w-full h-fulll items-center justify-center">
+      className="grid grid-cols-5 grid-rows-5 gap-0.5 flex w-full h-auto items-center justify-center">
           <motion.div variants={itemVariants} className="row-span-2 bg-white w-full h-full"></motion.div>
           <motion.div variants={itemVariants} className="col-span-3 row-span-2 bg-white w-full h-full"></motion.div>
           <motion.div variants={itemVariants} className="row-span-2 col-start-5 bg-white w-full h-full"></motion.div>
