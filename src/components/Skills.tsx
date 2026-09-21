@@ -7,9 +7,6 @@ import { FiFramer } from "react-icons/fi";
 
 import { TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect } from "react-icons/tb";
 
-
-
-
 const logosSoftDev = [FaReact, FaVuejs, FaHtml5, FaCss3, FaPhp, FaLaravel, VscVscode, SiIntellijidea, RiTailwindCssFill, IoLogoJavascript]
 const logosGraphic = [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect, FaFigma, FiFramer]
 
@@ -20,14 +17,14 @@ function Skills() {
             <div className="grid grid-cols-6 gap-0.5 w-full">
                 <div className="bg-black w-full">1</div>
                 <div className="col-span-4 flex w-full justify-center bg-black p-20">
-                    <h1 className="text-5xl font-bold text-white">What software do I use?</h1>
+                    <h1 className="text-5xl font-bold text-white pointer-events-none">What software do I use?</h1>
                 </div>
                 <div className="col-start-6 bg-black">4</div>
             </div>
             <div className="grid grid-cols-6 grid-rows-3 gap-0.5 w-full">
                 <div className="row-span-3 bg-black">1</div>
                 <div className="col-span-2 row-span-3 bg-blue-700 text-white flex flex-col justify-center p-10">
-                    <h1 className="font-bold text-2xl">Software Development</h1>
+                    <h1 className="font-bold text-2xl pointer-events-none">Software Development</h1>
                 </div>
                 <div className="col-span-2 row-span-3 col-start-4 p-5 bg-black w-full flex items-center justify-center">
                     <div className="grid grid-cols-5 gap-6 w-full h-full">
@@ -46,7 +43,7 @@ function Skills() {
             <div className="grid grid-cols-6 grid-rows-3 gap-0.5 w-full">
                 <div className="row-span-3 bg-black">1</div>
                 <div className="col-span-2 row-span-3 bg-yellow-500 text-white flex flex-col justify-center p-10">
-                    <h1 className="font-bold text-2xl">Graphic Designing</h1>
+                    <h1 className="font-bold text-2xl pointer-events-none">Graphic Designing</h1>
                 </div>
                 <div className="col-span-2 row-span-3 col-start-4 bg-black p-5 w-full flex items-center">
                     <div className="grid grid-cols-5 gap-6 w-full">

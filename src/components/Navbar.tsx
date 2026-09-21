@@ -31,7 +31,7 @@ function Navbar({show }: NavbarProps) {
 
           <li className="w-full">
             <Link
-            to="#about"
+            to="/contact"
               className="inline-block transition-all duration-200 hover:scale-110 hover:cursor-pointer"
             >
               Contact

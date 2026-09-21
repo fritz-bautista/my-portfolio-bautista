@@ -19,8 +19,8 @@ export interface Project {
 export const graphicProjectData: Project[] = [
     {
         id: 1,
-        title: "TechnoVerde Edge: Reducing PLP’s Institutional Footprint Through Smart Waste Management Systems and Sustainable Campus Practices",
-        quickDes: "A Thesis Project as requirement of the Pamantasan ng Lungsod ng Pasig.",
+        title: "RAMAN and YES Graphic Design Projects",
+        quickDes: "My visual designs as their marketing graphic designer.",
         thumbnail: technoverdeThumb,
         description: "This study developed TechnoVerde Edge, an IoT-enabled smart waste management system designed to improve the recycling process at Pamantasan ng Lungsod ng Pasig. The project focused on addressing issues related to inaccurate waste sorting, delayed waste collection, and the absence of real-time monitoring by integrating automated waste classification, sensor-based tracking, and data-driven route planning.",
         techStack: [

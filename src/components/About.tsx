@@ -30,7 +30,7 @@ function About() {
     },
   }
     return (
-        <div className="flex flex-col w-full min-h-screen bg-bg2 text-white font-google"> 
+        <div className="flex flex-col w-full min-h-screen bg-bg2 text-white font-google pointer-events-none"> 
             <div className="size-full bg-repeat bg-[url(/grid-ellipsis.svg)] bg-[length:100px_100px]">
                 <div className="relative size-full bg-gradient-to-tr from-zinc-950/100 via-zinc-950/80 to-zinc-950/100 overflow-hidden">
                     <div className="absolute top-1/4 -translate-y-1/2 w-full z-0 opacity-90 pointer-events-none hidden md:block lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]">
@@ -56,8 +56,8 @@ function About() {
             </div>
             <div className="flex flex-col items-center justify-center w-full">
                 {/* Made the QuoteCard into an array of objects to make it easier to add more cards int the future. */}
-                {quoteCardData.map((item) => (
-                    <div className="bg-black w-full">
+                {quoteCardData.map((item, index) => (
+                    <div key={index} className="bg-black w-full">
                         <motion.div 
                         variants={containerVariants}
                         initial="hidden"

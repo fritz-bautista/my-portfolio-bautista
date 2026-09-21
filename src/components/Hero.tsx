@@ -27,7 +27,7 @@ function Hero() {
   }
 
   return (
-    <div className="flex flex-col bg-black items-center justify-center w-full h-screen overflow-hidden">
+    <div className="flex flex-col bg-black items-center justify-center w-full h-screen overflow-hidden pointer-events-none">
       <motion.div 
       variants={containerVariants}
       initial="hidden"
