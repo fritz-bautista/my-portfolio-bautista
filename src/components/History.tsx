@@ -9,21 +9,25 @@ import image7 from '../assets/images/History/Raman-1.png';
 function History() {
     return (
         <>
-        <div className="flex flex-col items-center w-full h-full p-20 font-google bg-white pointer-events-none">
+        {/* Adjusted outer padding for mobile (p-6 lg:p-20) */}
+        <div className="flex flex-col items-center w-full h-full p-6 lg:p-20 font-google bg-white pointer-events-none">
             <div className="flex flex-col items-left w-full">
-                <h1 className="text-4xl font-bold">What have I been up to?</h1>
+                <h1 className="text-3xl lg:text-4xl font-bold">What have I been up to?</h1>
             </div>
-            <div className="flex flex-col font-google items-center w-4/5 h-full mt-10 pl-10">
+            
+            {/* Expanded width and adjusted left padding for mobile */}
+            <div className="flex flex-col font-google items-center w-full lg:w-4/5 h-full mt-10 pl-4 lg:pl-10">
                 {content.map((item, index) => (
                     <ScrollReveal key={item.id} delay={index * 150}>
-                        <div className="grid grid-cols-2 items-center justify-center border-l-4 border-secondary p-10 mb-10 gap-10">
+                        {/* Changed from forced grid-cols-2 to flex-col on mobile, grid on desktop */}
+                        <div className="flex flex-col lg:grid lg:grid-cols-2 items-center justify-center border-l-4 border-secondary p-6 lg:p-10 mb-10 gap-6 lg:gap-10">
                             <div className="w-full">
-                                <h1 className="text-2xl font-bold">{item.title}</h1>
-                                <p className="text-lg">{item.subtitle}</p>
-                                <p className="text-base mt-4 text-justify">{item.description}</p>
+                                <h1 className="text-xl lg:text-2xl font-bold">{item.title}</h1>
+                                <p className="text-base lg:text-lg text-gray-700">{item.subtitle}</p>
+                                <p className="text-sm lg:text-base mt-4 text-justify">{item.description}</p>
                             </div>
-                            <div>
-                                <img src={item.image} alt="Image Placeholder" className="w-full h-full object-cover lg:border-r-20" />
+                            <div className="w-full h-full mt-4 lg:mt-0">
+                                <img src={item.image} alt="History timeline point" className="w-full h-full object-cover rounded-lg lg:border-r-20 shadow-md lg:shadow-none" />
                             </div>
                         </div>
                     </ScrollReveal>

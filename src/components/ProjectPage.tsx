@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import ImageSlide from '../components/ImageSlide.tsx';
 import { motion, type Variants } from "framer-motion";
 
-
 function ProjectPage() {
     const navigate = useNavigate();
     const location = useLocation();
@@ -16,106 +15,138 @@ function ProjectPage() {
     const containerVariants: Variants = {
         hidden: {opacity: 0},
         show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.15,
-        },
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+            },
         },
     };
 
     const itemVariants: Variants = {
-        hidden: { opacity: 0, scale: 0.9 }, // Starts small and invisible
+        hidden: { opacity: 0, scale: 0.9 }, 
         show: {
-        opacity: 1,
-        scale: 1, // Scales to original size
-        transition: {
-            type: "spring",
-            stiffness: 260,
-            damping: 50,
-        },
+            opacity: 1,
+            scale: 1, 
+            transition: {
+                type: "spring",
+                stiffness: 260,
+                damping: 50,
+            },
         },
     }
 
     return (
         <div className="flex flex-col bg-black h-full w-full font-google">
+            
+            {/* HEADER SECTION */}
             <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-6 grid-rows-1 gap-0.5 w-full h-full mb-0.5 ">
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+                className="flex flex-col lg:grid lg:grid-cols-6 lg:grid-rows-1 gap-0.5 w-full lg:h-full mb-0.5"
+            >
                 <motion.div
-                variants={itemVariants}
-                className="relative z-20 bg-white flex items-center justify-center h-full w-full cursor-pointer"
-                onClick={() => navigate('/projects/menu', {state: 'webProjectData'})}
+                    variants={itemVariants}
+                    className="relative z-20 bg-white flex items-center justify-center p-4 lg:p-0 h-full w-full cursor-pointer hover:bg-gray-100 transition-colors"
+                    onClick={() => navigate('/projects/menu', {state: 'webProjectData'})}
                 >
-                    <IoIosArrowBack className="text-4xl"/>
-                    <h1 className="text-3xl font-medium">Back</h1>
+                    <IoIosArrowBack className="text-3xl lg:text-4xl"/>
+                    <h1 className="text-2xl lg:text-3xl font-medium">Back</h1>
                 </motion.div>
-                <motion.div variants={itemVariants} className="col-span-4 bg-white w-full flex justify-center p-10">
-                    <h1 className="text-4xl"></h1>
+                <motion.div variants={itemVariants} className="lg:col-span-4 bg-white w-full flex justify-center p-6 lg:p-10">
+                    <h1 className="text-2xl lg:text-4xl"></h1>
                 </motion.div>
-                <motion.div variants={itemVariants} className="col-start-6 bg-white"></motion.div>
+                <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 bg-white"></motion.div>
             </motion.div>
+
             {filteredData.map((project, index) => ( 
                 <React.Fragment key={index}>
+                    
+                    {/* MAIN PROJECT INFO SECTION */}
                     <motion.div 
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="show" 
-                    className="grid grid-cols-6 gap-0.5 mb-0.5 flex h-full">
-                        <motion.div variants={itemVariants} className="bg-white"></motion.div>
-                        <motion.div variants={itemVariants} className="col-span-4 flex items-center h-full">
-                            <img src={project.thumbnail} alt={project.thumbnail} className=""></img>
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="show" 
+                        className="flex flex-col lg:grid lg:grid-cols-6 gap-0.5 mb-0.5 w-full h-full"
+                    >
+                        {/* Spacers */}
+                        <motion.div variants={itemVariants} className="hidden lg:block bg-white"></motion.div>
+                        
+                        {/* Image */}
+                        <motion.div variants={itemVariants} className="w-full lg:col-span-4 flex items-center h-full bg-white lg:bg-transparent">
+                            <img src={project.thumbnail} alt={project.title} className="w-full h-auto object-cover" />
                         </motion.div>
-                        <motion.div variants={itemVariants} className="col-start-6 bg-white"></motion.div>
-                        <motion.div variants={itemVariants} className="row-start-2 bg-white"></motion.div>
-                        <motion.div variants={itemVariants} className="col-span-4 row-start-2 bg-white flex items-center justify-center">
-                            <h1 className="text-2xl font-bold text-center p-10">{project.title}</h1>
+                        
+                        {/* Spacers */}
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:row-start-2 bg-white"></motion.div>
+                        
+                        {/* Title */}
+                        <motion.div variants={itemVariants} className="w-full lg:col-span-4 lg:row-start-2 bg-white flex items-center justify-center">
+                            <h1 className="text-xl lg:text-2xl font-bold text-center p-6 lg:p-10">{project.title}</h1>
                         </motion.div>
-                        <motion.div variants={itemVariants} className="col-start-6 row-start-2 bg-white"></motion.div>
-                        <motion.div variants={itemVariants} className="row-start-3 bg-white">1</motion.div>
-                        <motion.div variants={itemVariants} className="col-span-4 row-start-3 p-10 flex auto-fit bg-white">
-                              <p className="text-black font-medium text-xl text-center">{project.description}</p>
+                        
+                        {/* Spacers */}
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 lg:row-start-2 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:row-start-3 bg-white"></motion.div>
+                        
+                        {/* Description */}
+                        <motion.div variants={itemVariants} className="w-full lg:col-span-4 lg:row-start-3 p-6 lg:p-10 flex bg-white">
+                            <p className="text-black font-medium text-base lg:text-xl text-center lg:text-left">{project.description}</p>
                         </motion.div>
-                        <motion.div variants={itemVariants} className="col-start-6 row-start-3 bg-white"></motion.div>
-                        <motion.div variants={itemVariants} className="row-start-4 bg-white"></motion.div>
-                        <motion.div variants={itemVariants} className="col-span-4 row-start-4 bg-white h-20"></motion.div>
-                        <motion.div variants={itemVariants} className="col-start-6 row-start-4 bg-white"></motion.div>
+                        
+                        {/* Bottom Spacers */}
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 lg:row-start-3 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:row-start-4 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-span-4 lg:row-start-4 bg-white lg:h-20"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 lg:row-start-4 bg-white"></motion.div>
                     </motion.div>
-                    <div className="grid grid-cols-6 gap-0.5 mb-0.5 bg-black">
-                        <div className="row-span-3 bg-white">1</div>
-                        <div className="col-span-4 row-span-3 bg-white flex items-center justify-center">
-                            {project.techStack.map((Icon, index) => (
+                    
+                    {/* TECH STACK SECTION */}
+                    <div className="flex flex-col lg:grid lg:grid-cols-6 gap-0.5 mb-0.5 bg-black">
+                        <div className="hidden lg:block lg:row-span-3 bg-white"></div>
+                        
+                        <div className="w-full lg:col-span-4 lg:row-span-3 bg-white flex flex-wrap items-center justify-center p-6 lg:p-10 gap-4">
+                            {project.techStack.map((Icon, idx) => (
                                 <div 
-                                key = {index}
-                                className="flex w-18 h-18 bg-white rounded-2xl items-center justify-center"
+                                    key={idx}
+                                    className="flex w-16 h-16 lg:w-18 lg:h-18 bg-gray-100 lg:bg-white rounded-2xl items-center justify-center shadow-sm lg:shadow-none"
                                 >
-                                    <Icon className="text-5xl"/>
+                                    <Icon className="text-4xl lg:text-5xl"/>
                                 </div>
                             ))} 
                         </div>
-                        <div className="row-span-3 col-start-6 bg-white"></div>
-                        <div className="row-start-4 bg-white"></div>
-                        <div className="col-span-4 row-start-4 bg-white"></div>
-                        <div className="col-start-6 row-start-4 bg-white"></div>
+                        
+                        <div className="hidden lg:block lg:row-span-3 lg:col-start-6 bg-white"></div>
+                        <div className="hidden lg:block lg:row-start-4 bg-white"></div>
+                        <div className="hidden lg:block lg:col-span-4 lg:row-start-4 bg-white lg:h-20"></div>
+                        <div className="hidden lg:block lg:col-start-6 lg:row-start-4 bg-white"></div>
                     </div> 
+                    
+                    {/* Assuming ImageSlide handles its own responsiveness */}
                     <ImageSlide featuresData={project.features}/>
-                    <div className="grid grid-cols-6 gap-0.5 w-full h-full">
-                        <div className="bg-white"></div>
-                        <div className="col-span-4 bg-white flex flex-col justify-center items-center">
-                            <h1 className="text-2xl font-bold p-5"> Recommendations </h1>  
+                    
+                    {/* RECOMMENDATIONS SECTION */}
+                    <div className="flex flex-col lg:grid lg:grid-cols-6 gap-0.5 w-full h-full bg-black">
+                        <div className="hidden lg:block bg-white"></div>
+                        
+                        <div className="w-full lg:col-span-4 bg-white flex flex-col justify-center items-center">
+                            <h1 className="text-xl lg:text-2xl font-bold p-5"> Recommendations </h1>  
                         </div>
-                        <div className="col-start-6 bg-white"></div>
-                        <div className="row-start-2 bg-white"></div>
-                        <div className="row-start-2 col-start-2 col-span-4 bg-white">
-                            <div className="flex flex-col justify-center items-center p-10">
-                                <p className="text-lg text-center">{project.recommendation}</p>
+                        
+                        <div className="hidden lg:block lg:col-start-6 bg-white"></div>
+                        <div className="hidden lg:block lg:row-start-2 bg-white"></div>
+                        
+                        <div className="w-full lg:row-start-2 lg:col-start-2 lg:col-span-4 bg-white">
+                            <div className="flex flex-col justify-center items-center p-6 lg:p-10">
+                                <p className="text-base lg:text-lg text-center">{project.recommendation}</p>
                             </div>
                         </div>
-                        <div className="row-start-2 col-start-6 bg-white"></div>
-                        <div className="row-start-3 bg-white"></div>
-                        <div className="row-start-3 col-start-2 col-span-4 bg-white"></div>
-                        <div className="row-start-3 col-start-6 bg-white h-20"></div>
+                        
+                        <div className="hidden lg:block lg:row-start-2 lg:col-start-6 bg-white"></div>
+                        <div className="hidden lg:block lg:row-start-3 bg-white"></div>
+                        <div className="hidden lg:block lg:row-start-3 lg:col-start-2 lg:col-span-4 bg-white lg:h-20"></div>
+                        <div className="hidden lg:block lg:row-start-3 lg:col-start-6 bg-white lg:h-20"></div>
                     </div>
                 </React.Fragment>
             ))}

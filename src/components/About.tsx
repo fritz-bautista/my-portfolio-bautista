@@ -30,17 +30,17 @@ function About() {
     },
   }
     return (
-        <div className="flex flex-col w-full min-h-screen bg-bg2 text-white font-google pointer-events-none"> 
+        <div className="flex flex-col w-screen min-h-screen bg-bg2 text-white font-google pointer-events-none"> 
             <div className="size-full bg-repeat bg-[url(/grid-ellipsis.svg)] bg-[length:100px_100px]">
                 <div className="relative size-full bg-gradient-to-tr from-zinc-950/100 via-zinc-950/80 to-zinc-950/100 overflow-hidden">
-                    <div className="absolute top-1/4 -translate-y-1/2 w-full z-0 opacity-90 pointer-events-none hidden md:block lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]">
+                    <div className="absolute top-1/4 -translate-y-1/2 w-full z-0 opacity-90 pointer-events-none lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]">
                         <Marquee/>
                     </div>
-                    <div className="relative z-10 flex md:flex-col-reverse lg:flex-row w-full lg:items-center lg:justify-center p-20">
-                        <div className="flex flex-col  lg:justify-center w-full lg:w-1/2 lg:gap-2 p-10 lg:p-20 lg:pt-40">
-                            <h1 className="text-xl lg:text-3xl font-bold text-left"> {aboutInfo.name} </h1>
-                            <h2 className="text-lg text-center lg:text-xl font-medium lg:text-left text-gray-300"> {aboutInfo.title} </h2>
-                            <p className="text-md text-center lg:text-lg lg:text-justify mt-1 w-full">
+                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full lg:items-center lg:justify-center p-15 lg:p-20">
+                        <div className="flex flex-col justify-center w-full lg:w-1/2 mt-10 gap-1 lg:gap-2 p-1 lg:p-20 lg:pt-40">
+                            <h1 className="text-lg lg:text-3xl font-bold text-center lg:text-left"> {aboutInfo.name} </h1>
+                            <h2 className="text-sm text-center lg:text-xl font-medium lg:text-left text-gray-300"> {aboutInfo.title} </h2>
+                            <p className="text-sm text-center lg:text-lg lg:text-justify mt-1 w-full">
                             {aboutInfo.description}
                             </p>
                         </div>
@@ -63,22 +63,22 @@ function About() {
                         initial="hidden"
                         whileInView="show"
                         viewport={{once:true, amount: 0.2}}
-                        className="grid grid-cols-6 grid-rows-5 gap-0.5 w-full text-black">
-                            <motion.div variants={itemVariants} className="bg-white w-full h-full"></motion.div>
+                        className="grid lg:grid-cols-6 gap-0.5 w-auto text-black">
+                            <motion.div variants={itemVariants} className="bg-white w-10 lg:w-full  h-10"></motion.div>
                             <motion.div variants={itemVariants} className="row-span-3 col-start-1 row-start-2 bg-white w-full h-full"></motion.div>
                             <motion.div variants={itemVariants} className="col-span-4 row-span-2 col-start-2 row-start-2 lg:col-span-2 lg:row-span-3 lg:col-start-2 lg:row-start-2 bg-white w-full h-full">
                                 <img src={item.img} alt="Self Portrait" className="w-full h-full object-cover lg:[mask-image:linear-gradient(to_right,black_60%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,black_60%,transparent_100%)]" />
                             </motion.div>
-                            <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-4 lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-2 bg-blue-600 w-full h-full flex flex-col gap-2 justify-center items-center text-center lg:text-left p-12">
-                                <h1 className="text-2xl font-bold w-full text-white">{item.title}</h1>
-                                <p className="w-full font-medium text-center lg:text-md lg:text-justify text-white">{item.description}</p>
+                            <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-4 lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-2 bg-blue-600 w-full h-full flex flex-col gap-2 justify-center items-center text-center lg:text-left p-5 lg:p-12">
+                                <h1 className="text-md lg:text-2xl font-bold w-full text-white">{item.title}</h1>
+                                <p className="font-small text-center text-sm lg:text-md lg:text-justify text-white">{item.description}</p>
                             </motion.div>
                             <motion.div variants={itemVariants} className="row-span-3 col-start-6 row-start-2 w-full h-full bg-white"></motion.div>
                             <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-1 bg-white w-full h-full"></motion.div>
                             <motion.div variants={itemVariants} className="col-start-6 row-start-1 bg-white w-full h-full"></motion.div>
                             <motion.div variants={itemVariants} className="col-start-1 row-start-5 bg-white w-full h-full"></motion.div>
                             <motion.div variants={itemVariants} className="col-span-4 col-start-2 row-start-5 bg-white w-full h-full"></motion.div>
-                            <motion.div variants={itemVariants} className="col-start-6 row-start-5 bg-white w-full h-full"></motion.div>
+                            <motion.div variants={itemVariants} className="col-start-6 row-start-5 bg-white w-10 lg:w-full h-10"></motion.div>
                         </motion.div>
                     </div>
                 ))}

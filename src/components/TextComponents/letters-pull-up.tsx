@@ -35,7 +35,7 @@ export function LettersPullUp({
           animate={isInView ? 'animate' : ''}
           custom={i}
           className={cn(
-            'text-xl text-center sm:text-4xl font-bold font-google tracking-tighter md:text-3xl md:leading-[4rem]',
+            'text-md lg:text-xl text-center font-bold font-google tracking-tighter md:leading-[4rem]',
             className
           )}
         >
