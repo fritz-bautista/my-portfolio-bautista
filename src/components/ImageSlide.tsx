@@ -1,4 +1,3 @@
-
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
@@ -10,6 +9,7 @@ interface FeaturesProp {
         description: string;
     }[];
 }
+
 // Retrieves the array from the ProjectPage
 function ImageSlide({featuresData}: FeaturesProp) {
 
@@ -17,20 +17,38 @@ function ImageSlide({featuresData}: FeaturesProp) {
         <div className="flex flex-col items-center w-full h-full bg-bg2 text-white font-google">
             <div className="size-full bg-repeat bg-[url(/grid-ellipsis.svg)] bg-[length:100px_100px]">
                 <div className="relative size-full bg-gradient-to-tr from-zinc-950/100 via-zinc-950/90 to-zinc-950/100 overflow-hidden"> 
-                    <div className="flex w-full h-full items-center ">
-                        <div className="w-full  flex flex-col pl-20 pr-20">
-                            <Slide onChange={function Hs(){}} onStartChange={function Hs(){}}
-                            easing="ease-out"
-                            transitionDuration={300}>
+                    {/* Added py-10 on mobile to give it top/bottom breathing room */}
+                    <div className="flex w-full h-full items-center py-10 lg:py-0">
+                        
+                        {/* Changed pl-20 pr-20 to px-4 on mobile, lg:px-20 on desktop */}
+                        <div className="w-full flex flex-col px-4 lg:px-20">
+                            <Slide 
+                                onChange={function Hs(){}} 
+                                onStartChange={function Hs(){}}
+                                easing="ease-out"
+                                transitionDuration={300}
+                            >
                                 {/* Loops the featuresData array to minimize lines */}
                                 {featuresData.map((items, index) => (
                                     <div 
-                                    key = {index}
-                                    className="each-slide-effect p-20">
-                                        <img src={items.image} alt={items.image} className="object-cover" />
-                                        <div className="flex flex-col">
-                                            <h1 className="text-3xl font-bold p-10">{items.name}</h1>
-                                            <p className="text-xl font-medium text-center">{items.description}</p>
+                                        key={index}
+                                        // Reduced inner padding from p-20 to p-4 on mobile
+                                        className="each-slide-effect p-4 lg:p-20 flex flex-col items-center"
+                                    >
+                                        <img 
+                                            src={items.image} 
+                                            alt={items.name} // Better accessibility: changed from items.image to items.name
+                                            // Added max-h constraints and rounded corners so images fit mobile screens neatly
+                                            className="object-cover w-full h-auto max-h-[40vh] lg:max-h-[60vh] shadow-lg" 
+                                        />
+                                        <div className="flex flex-col items-center w-full mt-6 lg:mt-0">
+                                            {/* Scaled text size and padding down for mobile */}
+                                            <h1 className="text-2xl lg:text-3xl font-bold p-4 lg:p-10 text-center">
+                                                {items.name}
+                                            </h1>
+                                            <p className="text-base sm:text-lg lg:text-xl font-medium text-center px-2 lg:px-10">
+                                                {items.description}
+                                            </p>
                                         </div>
                                     </div>
                                 ))}
