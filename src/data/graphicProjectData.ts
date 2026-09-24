@@ -6,8 +6,6 @@ import psscThumbnail from '../assets/images/Projects/Graphic Design/PSSCThumbnai
 import deepBlueThumbnail from '../assets/images/Projects/Graphic Design/DeepBlueThumbnail.png';
 import comsocThumbnail from '../assets/images/Projects/Graphic Design/ComSocThumbnail.png';
 
-
-
 // Deep Blue
 import deepBlueDiveFest from '../assets/images/Projects/Graphic Design/Deep Blue/DiveFest Main Poster.png';
 import deepBlueFbCover from '../assets/images/Projects/Graphic Design/Deep Blue/FB Cover Updated.png';
@@ -17,6 +15,11 @@ import deepBlueLedWall from '../assets/images/Projects/Graphic Design/Deep Blue/
 import psscCheerdance from '../assets/images/Projects/Graphic Design/PSSC/Cheerdance Latest.png';
 import psscLanyard from '../assets/images/Projects/Graphic Design/PSSC/Lanyard.png';
 import psscTradDigital from '../assets/images/Projects/Graphic Design/PSSC/trad and digital comp.png';
+import psscBracketFinal from '../assets/images/Projects/Graphic Design/PSSC/BracketFinal.png';
+import psscBracketSemi from '../assets/images/Projects/Graphic Design/PSSC/BracketSemi.png';
+import psscSports from '../assets/images/Projects/Graphic Design/PSSC/SportMain.png';
+import psscSportsPlayOffs from '../assets/images/Projects/Graphic Design/PSSC/PlayoffsTitle.png';
+
 
 //CCS
 import birthdayPost1 from '../assets/images/Projects/Graphic Design/PCS/BirthdayPost.png';
@@ -25,8 +28,6 @@ import byte from '../assets/images/Projects/Graphic Design/PCS/BYTE.png';
 import CCSAwards from '../assets/images/Projects/Graphic Design/PCS/CCSAwards.png';
 import GenAsembly from '../assets/images/Projects/Graphic Design/PCS/GenAsemb.png';
 import officers from '../assets/images/Projects/Graphic Design/PCS/officers.png';
-
-
 
 
 // RAMAN
@@ -113,7 +114,11 @@ export const graphicProjectData: Project[] = [
         image: [
             psscCheerdance,
             psscLanyard,
-            psscTradDigital
+            psscTradDigital,
+            psscSports,
+            psscBracketSemi,
+            psscSportsPlayOffs,
+            psscBracketFinal
         ],
         color: "bg-green-800"
     },
