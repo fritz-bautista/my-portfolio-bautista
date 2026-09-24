@@ -72,7 +72,7 @@ function ProjectMenu() {
                         {/* MAIN PROJECT CARD */}
                         <motion.div variants={itemVariants} className="w-full lg:col-span-4 lg:row-span-2 bg-black flex items-center hover:cursor-pointer lg:hover:scale-105 transition duration-300 ease-in-out">
                             <div 
-                                onClick={() => navigate('/projects/menu/page', {state: project.id} )}
+                                onClick={() => navigate('/projects/menu/web/page', {state: project.id} )}
                                 // Stacks image and text vertically on mobile, side-by-side on desktop
                                 className="flex flex-col lg:grid lg:grid-cols-2 w-full h-full"
                             >
@@ -95,21 +95,43 @@ function ProjectMenu() {
                     </motion.div>
                 )) 
             ) : (
-                <motion.div 
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="show"
-                    className="flex flex-col lg:grid lg:grid-cols-6 gap-0.5 w-full min-h-[60vh] lg:h-screen mb-0.5"
-                >
-                    <motion.div variants={itemVariants} className="hidden lg:block lg:row-span-2 bg-white"></motion.div>
-                    <motion.div variants={itemVariants} className="w-full h-full lg:col-span-4 lg:row-span-2 bg-white flex items-center justify-center p-10 text-center">                        
-                        <h1 className="text-2xl lg:text-4xl font-bold">Oops! Sorry this page is still under construction.</h1>
+                projectDisplay.map((project, index) => (
+                    <motion.div 
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{once:true, amount: 0.2}}
+                        key={index} 
+                        className="flex flex-col lg:grid lg:grid-cols-6 gap-0.5 w-full h-full mb-0.5"
+                    >
+                        {/* Spacers - Hidden on mobile */}
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:row-span-2 bg-white"></motion.div>
+                        
+                        {/* MAIN PROJECT CARD */}
+                        <motion.div variants={itemVariants} className="w-full lg:col-span-4 lg:row-span-2 bg-black flex items-center hover:cursor-pointer lg:hover:scale-105 transition duration-300 ease-in-out">
+                            <div 
+                                onClick={() => navigate('/projects/menu/graphic/page', {state: project.id} )}
+                                // Stacks image and text vertically on mobile, side-by-side on desktop
+                                className="flex flex-col lg:grid lg:grid-cols-2 w-full h-full"
+                            >
+                                <div className="flex items-center w-full">
+                                    {/* Set height for mobile (h-56) so it doesn't squash, full height on desktop */}
+                                    <img src={project.thumbnail} alt={project.title} className="object-cover w-full h-56 lg:h-full"></img>  
+                                </div>
+                                <div className={`w-full h-full flex flex-col p-6 lg:p-10 gap-3 lg:gap-5 justify-center ${project.color}`}>
+                                    <h1 className="text-xl lg:text-2xl text-white font-bold text-left">{project.title}</h1>
+                                    <p className="text-base lg:text-xl text-white font-medium">{project.quickDes}</p>
+                                </div>
+                            </div>
+                        </motion.div>
+                        
+                        {/* Outer & Bottom Spacers - Hidden on mobile */}
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:row-span-2 lg:col-start-6 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:row-start-3 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-span-4 lg:row-start-3 bg-white"></motion.div>
+                        <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 lg:row-start-3 bg-white lg:h-20"></motion.div>
                     </motion.div>
-                    <motion.div variants={itemVariants} className="hidden lg:block lg:row-span-2 lg:col-start-6 bg-white"></motion.div>
-                    <motion.div variants={itemVariants} className="hidden lg:block lg:row-start-3 bg-white"></motion.div>
-                    <motion.div variants={itemVariants} className="hidden lg:block lg:col-span-4 lg:row-start-3 bg-white"></motion.div>
-                    <motion.div variants={itemVariants} className="hidden lg:block lg:col-start-6 lg:row-start-3 bg-white"></motion.div>
-                </motion.div>
+                )) 
             )}
         </div>
     )

@@ -4,9 +4,9 @@ import 'react-slideshow-image/dist/styles.css';
 // declaration of value type for the featuresData
 interface FeaturesProp {
     featuresData: {
-        name: string;
+        name?: string;
         image: string;
-        description: string;
+        description?: string;
     }[];
 }
 
@@ -35,21 +35,32 @@ function ImageSlide({featuresData}: FeaturesProp) {
                                         // Reduced inner padding from p-20 to p-4 on mobile
                                         className="each-slide-effect p-4 lg:p-20 flex flex-col items-center"
                                     >
-                                        <img 
+                                        <div className="w-auto h-200">
+                                            <img 
                                             src={items.image} 
-                                            alt={items.name} // Better accessibility: changed from items.image to items.name
-                                            // Added max-h constraints and rounded corners so images fit mobile screens neatly
-                                            className="object-cover w-full h-auto max-h-[40vh] lg:max-h-[60vh] shadow-lg" 
-                                        />
-                                        <div className="flex flex-col items-center w-full mt-6 lg:mt-0">
-                                            {/* Scaled text size and padding down for mobile */}
-                                            <h1 className="text-2xl lg:text-3xl font-bold p-4 lg:p-10 text-center">
-                                                {items.name}
-                                            </h1>
-                                            <p className="text-base sm:text-lg lg:text-xl font-medium text-center px-2 lg:px-10">
-                                                {items.description}
-                                            </p>
+                                            alt={items.name}
+                                            className="object-contain w-full h-full shadow-lg" 
+                                            />
                                         </div>
+                                        {(items.name || items.description) && (
+                                            <div className="flex flex-col items-center w-full mt-6 lg:mt-0">
+                                                
+                                                {/* Conditionally render the name <h1> */}
+                                                {items.name && (
+                                                    <h1 className="text-2xl lg:text-3xl font-bold p-4 lg:p-10 text-center">
+                                                        {items.name}
+                                                    </h1>
+                                                )}
+                                                
+                                                {/* Conditionally render the description <p> */}
+                                                {items.description && (
+                                                    <p className="text-base sm:text-lg lg:text-xl font-medium text-center px-2 lg:px-10">
+                                                        {items.description}
+                                                    </p>
+                                                )}
+                                                
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </Slide>

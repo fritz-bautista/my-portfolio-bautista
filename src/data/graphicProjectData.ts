@@ -1,120 +1,151 @@
-import technoverdeThumb from '../assets/images/Projects/Web Development/TechnoVerde/VerdeHub.png';
+import { TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect } from "react-icons/tb";
+//Thumbnail
+import ramanThumbnail from '../assets/images/Projects/Graphic Design/RamanThumbnail.png';
+import yesThumbnail from '../assets/images/Projects/Graphic Design/YESThumbnail.png';
+import psscThumbnail from '../assets/images/Projects/Graphic Design/PSSCThumbnail.png';
+import deepBlueThumbnail from '../assets/images/Projects/Graphic Design/DeepBlueThumbnail.png';
+import comsocThumbnail from '../assets/images/Projects/Graphic Design/ComSocThumbnail.png';
+
+
+
+// Deep Blue
+import deepBlueDiveFest from '../assets/images/Projects/Graphic Design/Deep Blue/DiveFest Main Poster.png';
+import deepBlueFbCover from '../assets/images/Projects/Graphic Design/Deep Blue/FB Cover Updated.png';
+import deepBlueLedWall from '../assets/images/Projects/Graphic Design/Deep Blue/LED Wall 9x12.png';
+
+// PSSC
+import psscCheerdance from '../assets/images/Projects/Graphic Design/PSSC/Cheerdance Latest.png';
+import psscLanyard from '../assets/images/Projects/Graphic Design/PSSC/Lanyard.png';
+import psscTradDigital from '../assets/images/Projects/Graphic Design/PSSC/trad and digital comp.png';
+
+//CCS
+import birthdayPost1 from '../assets/images/Projects/Graphic Design/PCS/BirthdayPost.png';
+import birthdayPost2 from '../assets/images/Projects/Graphic Design/PCS/BirthdayPost2.png';
+import byte from '../assets/images/Projects/Graphic Design/PCS/BYTE.png';
+import CCSAwards from '../assets/images/Projects/Graphic Design/PCS/CCSAwards.png';
+import GenAsembly from '../assets/images/Projects/Graphic Design/PCS/GenAsemb.png';
+import officers from '../assets/images/Projects/Graphic Design/PCS/officers.png';
+
+
+
+
+// RAMAN
+import ramanDeal2 from '../assets/images/Projects/Graphic Design/RAMAN/Deal2.png';
+import ramanEventPlaceRent from '../assets/images/Projects/Graphic Design/RAMAN/EventPlaceRent.png';
+import ramanFathersDay from '../assets/images/Projects/Graphic Design/RAMAN/FathersDayRaman.png';
+import ramanKtvRoom from '../assets/images/Projects/Graphic Design/RAMAN/KTVRoomPoster.png';
+import ramanMusicNight from '../assets/images/Projects/Graphic Design/RAMAN/MusicNight.png';
+import ramanFatherDayDeal from '../assets/images/Projects/Graphic Design/RAMAN/RamanFatherDayDeal.png';
+import ramanFoodTray from '../assets/images/Projects/Graphic Design/RAMAN/RamanFoodTray.png';
+import ramanSharmaineMeme from '../assets/images/Projects/Graphic Design/RAMAN/RamanSharmaineMEME.png';
+import ramanStartsAt179 from '../assets/images/Projects/Graphic Design/RAMAN/StartsAt179.png';
+
+// YES
+import yesArtboard1 from '../assets/images/Projects/Graphic Design/YES/Artboard 1.png';
+import yesBudbod from '../assets/images/Projects/Graphic Design/YES/Budbod.png';
+import yesDeal1 from '../assets/images/Projects/Graphic Design/YES/Deal1.png';
+import yesDeal2 from '../assets/images/Projects/Graphic Design/YES/Deal2.png';
+import yesDelivery from '../assets/images/Projects/Graphic Design/YES/Delivery.png';
+import yesMeriendaSet from '../assets/images/Projects/Graphic Design/YES/MeriendaSetYES.png';
+import yesPayDayJuly from '../assets/images/Projects/Graphic Design/YES/PayDayJuly.png';
+import yesSharmaine from '../assets/images/Projects/Graphic Design/YES/Sharmaine.png';
+
+import { type IconType } from "react-icons";
 
 export interface Project {
     id: number;
     title: string;
     quickDes: string;
     thumbnail: string;
-    techStack: string[];
+    techStack: IconType[];
     description: string;
-    features: {
-        name: string;
-        image: string;
-        description: string;
-    }[];
-    recommendation: string;
+    image: string[];
     color: string;
 }
 
 export const graphicProjectData: Project[] = [
     {
         id: 1,
-        title: "RAMAN and YES Graphic Design Projects",
-        quickDes: "My visual designs as their marketing graphic designer.",
-        thumbnail: technoverdeThumb,
-        description: "This study developed TechnoVerde Edge, an IoT-enabled smart waste management system designed to improve the recycling process at Pamantasan ng Lungsod ng Pasig. The project focused on addressing issues related to inaccurate waste sorting, delayed waste collection, and the absence of real-time monitoring by integrating automated waste classification, sensor-based tracking, and data-driven route planning.",
-        techStack: [
-        "Laravel PHP",
-        "Laravel Blade",
-        "CSS",
-        "JavaScript",
-        "MySQL",
-        "Python",
-        "C++"
+        title: "RAMAN Restaurant",
+        quickDes: "Designed appetizing digital and print marketing materials for restaurant promotions and seasonal events using Adobe Creative Suite.",
+        description: "Aside from YES Restaurant, I was also doing another set of branding for their new Restaurant Raman. For this restaurant, we chose a more premium look for the advertisements and its visuals. The green also is chosen as the pallete as we want to emphasize the freshness of each dish that is being served. Also a much calmer color that fits the restaurants branding.",
+        thumbnail: ramanThumbnail,
+        techStack: [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect],
+        image: [
+            ramanDeal2, 
+            ramanEventPlaceRent, 
+            ramanFathersDay, 
+            ramanKtvRoom, 
+            ramanMusicNight, 
+            ramanFatherDayDeal, 
+            ramanFoodTray, 
+            ramanSharmaineMeme, 
+            ramanStartsAt179
         ],
-        features: [
-        {
-            name: "Dashboard",
-            image: "",
-            description: "The Dashboard includes a Key Performance Indicator for the amount of trash accumulated and disposed of. It also includes a quick view of the smart bin status per floor. The dashboard also includes a ranking board for each college for the amount of waste recycled."
-        },
-        {
-            name: "Bin Manager",
-            image: "",
-            description: "The Bin Manager provides an overview of all available smart bins on campus. The administrator can add smart bins manually, but personnel do not. The Bin Manager section as well can check the recent history records of each bin. Users can also edit particular details on any given bin record, such as the type of bin, physical location of the bin, and the staff member responsible for maintenance, enabling the system to maintain accurate, up-to-date, and actionable records to facilitate the upkeep of waste management."
-        },
-        {
-            name: "Report Analytics",
-            image: "",
-            description: "The Report Analytics component produces reports that contain detailed information regarding recycling activity on campus. These reports include a rank-ordered listing of colleges based on overall recycling rate and total waste collected. The report also represents which college, campus floor, or smart bins generated the most recyclable waste over the reporting period, including paper, plastic bottles, and similar materials."
-        },
-        {
-            name: "Utility Manager",
-            image: "",
-            description: "The Utility Manager allows administrators to manage accounts of utility staff efficiently through CRUD functionality for accounts, including the ability to create, view, update, and delete accounts. The module also allows the assignment of specific floors or areas of responsibility for each staff member in order to effectively organize and equitably distribute waste collection duties on the campus."
-        },
-        {
-            name: "Account Manager",
-            image: "",
-            description: "The Account Manager supplies administrators with the necessary tools to manage user accounts more easily. CRUD operations (create, read, update, delete) are supported for accounts in the system, and all accounts are displayed in a table for easy tracking, organizing, and managing of user information."
-        },
-        {
-            name: "College and Ranking Manager",
-            image: "",
-            description: "The Ranking Manager facilitates administrators in overseeing the ranking process based on each semester, so they can begin or stop rankings based on the recycling of data being collected. It also presents a table with the history of previous rankings, which provides them a place to review results, see if they have improved, and track changes in performance over time."
-        }
-        ],
-        recommendation: "To further improve the system, the study recommends strengthening the area of portability, since the capability to replace existing software received the lowest rating at 76.5 percent. Improving system compatibility or simplifying integration with other digital platforms may help address this concern. It is also recommended to enhance maintenance features by adding automated alerts, more detailed diagnostic reports, and extended monitoring tools. Improving sensor calibration, adding additional waste categories, and upgrading the durability of hardware components may also help the system maintain long-term efficiency.",
-        color: "bg-blue-800"
+        color: "bg-green-900"
     },
     {
         id: 2,
-        title: "CUISINE Website",
-        quickDes: "An academic and research base website, with CMS functionality.",
-        thumbnail: technoverdeThumb,
-        description: "This study developed TechnoVerde Edge, an IoT-enabled smart waste management system designed to improve the recycling process at Pamantasan ng Lungsod ng Pasig. The project focused on addressing issues related to inaccurate waste sorting, delayed waste collection, and the absence of real-time monitoring by integrating automated waste classification, sensor-based tracking, and data-driven route planning.",
-        techStack: [
-        "Laravel PHP",
-        "Laravel Blade",
-        "CSS",
-        "JavaScript",
-        "MySQL",
-        "Python",
-        "C++"
+        title: "YES Restaurant",
+        quickDes: "Designed appetizing digital and print marketing materials for restaurant promotions and seasonal events using Adobe Creative Suite.",
+        description: "During my part-time role at YES Efren's Resto Bar, I worked on giving the brand a fresh look that reflected its daring and energetic atmosphere. I established red as the main brand color for digital campaigns, leveraging its psychological connection to food and intense emotion to attract viewers. I also overhauled their existing graphics, which previously lacked structure and felt outdated. By introducing modern layouts and cohesive design elements, I successfully elevated their visual identity to better highlight their signature BBQ menu.",
+        thumbnail: yesThumbnail,
+        techStack: [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect],
+        image: [
+            yesArtboard1, 
+            yesBudbod, 
+            yesDeal1, 
+            yesDeal2, 
+            yesDelivery, 
+            yesMeriendaSet, 
+            yesPayDayJuly, 
+            yesSharmaine
         ],
-        features: [
-        {
-            name: "Dashboard",
-            image: "",
-            description: "The Dashboard includes a Key Performance Indicator for the amount of trash accumulated and disposed of. It also includes a quick view of the smart bin status per floor. The dashboard also includes a ranking board for each college for the amount of waste recycled."
-        },
-        {
-            name: "Bin Manager",
-            image: "",
-            description: "The Bin Manager provides an overview of all available smart bins on campus. The administrator can add smart bins manually, but personnel do not. The Bin Manager section as well can check the recent history records of each bin. Users can also edit particular details on any given bin record, such as the type of bin, physical location of the bin, and the staff member responsible for maintenance, enabling the system to maintain accurate, up-to-date, and actionable records to facilitate the upkeep of waste management."
-        },
-        {
-            name: "Report Analytics",
-            image: "",
-            description: "The Report Analytics component produces reports that contain detailed information regarding recycling activity on campus. These reports include a rank-ordered listing of colleges based on overall recycling rate and total waste collected. The report also represents which college, campus floor, or smart bins generated the most recyclable waste over the reporting period, including paper, plastic bottles, and similar materials."
-        },
-        {
-            name: "Utility Manager",
-            image: "",
-            description: "The Utility Manager allows administrators to manage accounts of utility staff efficiently through CRUD functionality for accounts, including the ability to create, view, update, and delete accounts. The module also allows the assignment of specific floors or areas of responsibility for each staff member in order to effectively organize and equitably distribute waste collection duties on the campus."
-        },
-        {
-            name: "Account Manager",
-            image: "",
-            description: "The Account Manager supplies administrators with the necessary tools to manage user accounts more easily. CRUD operations (create, read, update, delete) are supported for accounts in the system, and all accounts are displayed in a table for easy tracking, organizing, and managing of user information."
-        },
-        {
-            name: "College and Ranking Manager",
-            image: "",
-            description: "The Ranking Manager facilitates administrators in overseeing the ranking process based on each semester, so they can begin or stop rankings based on the recycling of data being collected. It also presents a table with the history of previous rankings, which provides them a place to review results, see if they have improved, and track changes in performance over time."
-        }
+        color: "bg-red-900"
+    },
+    {
+        id: 3,
+        title: "PLP Supreme Student Council",
+        quickDes: "Developed engaging visual campaigns for student elections, university-wide events, and official council announcements.",
+        description: "During my time in the PSSC, I actively assisted with event coordination and logistics. also served as the official spokesperson representing COS students to the council. Additionally, I helped design publication materials tor major events and promotional campaigns, creating numerous posters across various designs.",
+        thumbnail: psscThumbnail,
+        techStack: [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect],
+        image: [
+            psscCheerdance,
+            psscLanyard,
+            psscTradDigital
         ],
-        recommendation: "To further improve the system, the study recommends strengthening the area of portability, since the capability to replace existing software received the lowest rating at 76.5 percent. Improving system compatibility or simplifying integration with other digital platforms may help address this concern. It is also recommended to enhance maintenance features by adding automated alerts, more detailed diagnostic reports, and extended monitoring tools. Improving sensor calibration, adding additional waste categories, and upgrading the durability of hardware components may also help the system maintain long-term efficiency.",
         color: "bg-green-800"
+    },
+    {
+        id: 4,
+        title: "PLP Computer Society",
+        quickDes: "Created visuals for organizations posters and promotions. Lead design decisions and branding of the organizations.",
+        description: "During my term at the PLP Computer Society, I was in charge of creating visual content for the Facebook page, as well as designing numerous banners, tarpaulins, and other print materials. Beyond graphics, I also assisted with logistics and external communications, which significantly boosted my confidence and interpersonal skills.",
+        thumbnail: comsocThumbnail, // Placeholder - add PCS imports if needed
+        techStack: [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect],
+        image: [
+            birthdayPost1, 
+            birthdayPost2,
+            byte,
+            CCSAwards,
+            GenAsembly,
+            officers,
+        ],
+        color: "bg-gray-500"
+    },
+    {
+        id: 5,
+        title: "BGC Deep Blue Dive Fest",
+        quickDes: "Created vibrant, ocean-themed visual assets for large-scale event banners and digital marketing collateral.",
+        description: "This project was developed for an event called Deep Blue Dive Fest, an organization created for members who share a passion for marine life and scuba diving. All visual materials were created on-the-spot alongside the client during a design sprint, resulting in the official branding for the event. The deliverable includes social media posters, merchandise designs, and LED wall graphics.",
+        thumbnail: deepBlueThumbnail,
+        techStack: [TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect],
+        image: [
+            deepBlueDiveFest,
+            deepBlueFbCover,
+            deepBlueLedWall
+        ],
+        color: "bg-blue-800"
     }
 ];

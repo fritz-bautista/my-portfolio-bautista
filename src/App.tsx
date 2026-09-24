@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.tsx';
 import Home from './pages/Home.tsx';
 import ProjectMenu from './components/ProjectMenu.tsx';
 import ProjectPage from './components/ProjectPage.tsx';
+import ProjectGraphicPage from './components/ProjectGraphicPage.tsx';
 import ProjectHome from './pages/ProjectHome.tsx';
 import Contact from './components/Contact.tsx';
 import { IoMenu } from "react-icons/io5";
@@ -34,7 +35,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectHome />} />
         <Route path="/projects/menu" element={<ProjectMenu />} />
-        <Route path="/projects/menu/page" element={<ProjectPage />} />
+        <Route path="/projects/menu/web/page" element={<ProjectPage />} />
+          <Route path="/projects/menu/graphic/page" element={<ProjectGraphicPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
